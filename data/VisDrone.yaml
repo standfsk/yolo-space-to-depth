@@ -1,0 +1,20 @@
+
+train: dataset/VisDrone/train/images
+val: dataset/VisDrone/val/images
+test: dataset/VisDrone/test/images
+
+# Number of Classes
+nc: 10
+# Classes
+names: [
+  "pedestrian",
+  "people",
+  "bicycle",
+  "car",
+  "van",
+  "truck",
+  "tricycle",
+  "awning-tricycle",
+  "bus",
+  "motor"
+]
