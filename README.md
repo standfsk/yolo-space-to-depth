@@ -9,6 +9,7 @@ This is unofficial implementation of SP-YOLO on YOLOv7
 
 ## Model
 ![image](https://github.com/user-attachments/assets/0869f091-4c2e-4b76-a516-e5c5a15a9d39)
+- Change some Conv layers to Space-to-depth module
 
 ## Dataset
 - VisDrone(https://github.com/VisDrone/VisDrone-Dataset)
@@ -33,5 +34,12 @@ python test.py --device 0 --data data/visdrone.yaml --img 640 --cfg cfg/training
 python detect.py --device 0 --source sample.jpg --weights runs/train/visdrone-yolov7s2d/weights/best.pt --name yolov7s2d
 ```
 
+## Performance
+| Model                      | P    | R    | mAP@.5 | mAP@.5:.95 | Model Params | FPS   |
+|----------------------------|------|------|--------|------------|--------------|--------|
+| yolov7                     | 0.600| 0.501| 0.496  | 0.288      | 36,530,318   | 29.18  |
+| yolov7-space-to-depth      | 0.608| 0.519| 0.524  | 0.309      | 39,298,510   | 20.36  |
+
 ## Result
-![res](https://github.com/user-attachments/assets/b4e1ae3f-2660-4032-bcdc-811e6b26f9cd)
+![res](https://github.com/user-attachments/assets/cfb19ecc-5939-4e28-935b-ec0365727b61)
+
